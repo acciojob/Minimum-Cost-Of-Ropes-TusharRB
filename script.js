@@ -69,7 +69,10 @@ class MinHeap {
   heapifyUp(index) {
     const parentIndex = Math.floor((index - 1) / 2);
 
-    if (parentIndex >= 0 && this.heap[parentIndex] > this.heap[index]) {
+    if (
+      parentIndex >= 0 &&
+      this.heap[parentIndex] > this.heap[index]
+    ) {
       [this.heap[parentIndex], this.heap[index]] = [
         this.heap[index],
         this.heap[parentIndex],
@@ -108,7 +111,9 @@ class MinHeap {
 }
 
 // Add event listener to the form submission
-document.getElementById("rope-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  calculateMinCost();
-});
+document
+  .getElementById("rope-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+    calculateMinCost();
+  });
